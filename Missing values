@@ -1,0 +1,42 @@
+#TRYOUT
+    
+
+#hiermee kun je zien dat er maar 3 variabelen zijn met numerieke missing values en 1 categorische
+
+df_pre.isnull().sum()
+
+
+#numerical values
+
+    #first numerical
+
+
+array = df_pre[df_pre['AVG_DATA_3MONTH']!=np.nan]['AVG_DATA_3MONTH']
+
+mean1 = array.mean()
+
+df.AVG_DATA_3MONTH = df.fillna(mean1)
+
+    #Second numerical
+
+array = df_pre[df_pre['COUNT_CONNECTIONS_3MONTH']!=np.nan]['COUNT_CONNECTIONS_3MONTH']
+
+mean2 = array.mean()
+
+df.COUNT_CONNECTIONS_3MONTH = df.fillna(mean2)
+
+    #third numerical
+
+
+array = df_pre[df_pre["AVG_DATA_1MONTH"]!=np.nan]["AVG_DATA_1MONTH"]
+
+print(array)
+
+mean3 = array.mean()
+
+df.AVG_DATA_1MONTH = df.fillna(mean3)
+
+
+df_pre["AVG_DATA_1MONTH"]
+
+df_pre.isnull().sum()
